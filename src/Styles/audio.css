@@ -1,0 +1,95 @@
+body {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Set the height of the body to 100% of the viewport height */
+  margin: 0; /* Remove default body margin */
+  border: 1px solid black;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 500px;
+  
+}
+
+.audio-player-card {
+  background-image: url('../assests/cdplayer.webp');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 200px;
+  
+}
+
+input[type='file'] {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.audio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audio-list li {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #f2f2f2;
+  transition: background-color 0.3s;
+}
+
+.audio-list li:hover {
+  background-color: #ddd;
+}
+
+.now-playing-text {
+  color: black;
+  white-space: nowrap; 
+  overflow: hidden;
+  animation: moveText 10s linear infinite; 
+
+  /* Optional styling */
+  margin: 0;
+}
+
+@keyframes moveText {
+  10% {
+    transform: translateX(30%);
+  }
+  50% {
+    transform: translateX(-10%); 
+  }
+}
+
